@@ -1,0 +1,102 @@
+/* Gaya untuk mengatur tata letak elemen ke tengah */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Warna latar belakang gelap */
+    color: #fff; /* Warna teks putih */
+    opacity: 0.9; /* Kecerahan latar belakang (0 hingga 1, dengan 1 adalah penuh) */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.profile-image {
+    padding-top: 80px;
+}
+.profile-image img {
+    width: 150px; /* Lebar gambar profil */
+    height: 170px; /* Tinggi gambar profil */
+    object-fit: cover; /* Memastikan gambar tetap proporsional dan terpotong menjadi lingkaran */
+    border-radius: 100%; /* Membuat gambar profil menjadi lingkaran */
+}
+
+header {
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Warna teks navigasi putih */
+    font-weight: bold;
+}
+
+
+
+
+#card {
+    background-color: #111; /* Warna latar belakang tentang yang lebih gelap */
+    width: 500px; /* Lebar konten tentang */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Membuat konten di dalamnya dapat di-scroll jika lebih besar dari area yang tersedia */
+    max-height: 400px; /* Atur tinggi maksimum konten yang bisa ditampilkan (sesuaikan sesuai kebutuhan) */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 20px; /* Jarak antara grid-item */
+}
+
+.grid-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya tambahan sesuai kebutuhan Anda */
+
+
+/* Gaya tambahan sesuai kebutuhan Anda */
+
+/* Media query untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+    .profile-image img {
+        width: 100px; /* Ubah ukuran gambar profil untuk layar kecil */
+        height: 100px;
+    }
+
+    #card {
+        width: 90%; /* Gunakan lebar penuh untuk konten tentang pada layar kecil */
+        padding: 10px; /* Kurangi padding pada layar kecil untuk lebih baik tampilan mobile */
+    }
+
+    /* Perbarui tata letak grid pada layar kecil */
+    .grid-container {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    /* Perbarui ukuran dan padding untuk item grid pada layar kecil */
+    .grid-item {
+        padding: 10px;
+        text-align: center;
+    }
+}
